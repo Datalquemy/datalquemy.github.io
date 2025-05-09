@@ -22,6 +22,22 @@
     header img {
       max-width: 120px;
     }
+    .lang-switch {
+      text-align: center;
+      margin: 1rem;
+    }
+    .lang-switch button {
+      background-color: #4ea1ff;
+      color: #121212;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .lang-switch button:hover {
+      background-color: #62b3ff;
+    }
     main {
       padding: 2rem;
       max-width: 800px;
@@ -63,7 +79,17 @@
       font-size: 0.9rem;
       color: #aaa;
     }
+    .es, .en { display: none; }
+    body.lang-es .es { display: block; }
+    body.lang-en .en { display: block; }
   </style>
+  <script>
+    function switchLanguage(lang) {
+      document.body.classList.remove('lang-en', 'lang-es');
+      document.body.classList.add('lang-' + lang);
+    }
+    window.onload = () => switchLanguage('en');
+  </script>
 </head>
 <body>
   <header>
@@ -71,37 +97,62 @@
     <h1>DatAlquemy</h1>
     <p>Turning data into insight</p>
   </header>
+  <div class="lang-switch">
+    <button onclick="switchLanguage('en')">English</button>
+    <button onclick="switchLanguage('es')">Español</button>
+  </div>
   <main>
-    <section>
+    <section class="en">
+      <h2>About Me</h2>
+      <p>I'm Emmanuel Eduardo, founder of DatAlquemy. I have over 18 years of experience in technology and I'm currently developing data analytics solutions applied to areas such as urban mobility and the energy industry using tools like Python, Databricks, Spark, GCP, and AWS.</p>
+      <a href="cv.pdf" class="button" download>📄 Download CV</a>
+    </section>
+    <section class="es">
       <h2>Sobre mí</h2>
-      <p>Soy Emmanuel Eduardo, fundador de DatAlquemy. Tengo más de 18 años de experiencia en tecnología y actualmente desarrollo soluciones de análisis de datos aplicadas a sectores como la movilidad urbana y la industria energética usando herramientas como Python, Databricks, Spark, GCP y AWS.</p>
+      <p>Soy Emmanuel Eduardo, fundador de DatAlquemy. Tengo más de 18 años de experiencia en tecnología y actualmente desarrollo soluciones de análisis de datos aplicadas a la movilidad urbana y la industria energética usando herramientas como Python, Databricks, Spark, GCP y AWS.</p>
       <a href="cv.pdf" class="button" download>📄 Descargar CV</a>
     </section>
 
-    <section>
+    <section class="en">
+      <h2>Projects</h2>
+      <h3>Smart Urban Mobility</h3>
+      <p>Traffic simulation in Villahermosa using GCP (BigQuery, Cloud Storage, Power BI) to detect critical congestion points and propose data-driven solutions.</p>
+      <h3>Smart Wells</h3>
+      <p>Use of CNH public data and Machine Learning in Databricks to predict well maintenance needs and optimize production. MLflow was implemented for experiment tracking and model versioning.</p>
+    </section>
+    <section class="es">
       <h2>Proyectos</h2>
       <h3>Movilidad Urbana Inteligente</h3>
-      <p>Simulación de tráfico vehicular en Villahermosa usando GCP (BigQuery, Cloud Storage, Power BI) para detectar puntos críticos de afluencia y proponer soluciones basadas en datos.</p>
-
+      <p>Simulación de tráfico en Villahermosa usando GCP (BigQuery, Cloud Storage, Power BI) para detectar puntos críticos de congestión y proponer soluciones basadas en datos.</p>
       <h3>Smart Wells</h3>
-      <p>Uso de datos de la CNH y Machine Learning en Databricks para predicción de mantenimientos en pozos petroleros. Implementación de MLflow para trazabilidad y versionado de modelos.</p>
+      <p>Uso de datos públicos de la CNH y Machine Learning en Databricks para predecir mantenimientos y optimizar producción. Se implementó MLflow para el seguimiento de experimentos y versiones.</p>
     </section>
 
-    <section>
+    <section class="en">
+      <h2>Technologies</h2>
+      <p>Python · PySpark · Databricks · MLflow · Google Cloud · AWS · Azure · Power BI · GitHub</p>
+    </section>
+    <section class="es">
       <h2>Tecnologías</h2>
       <p>Python · PySpark · Databricks · MLflow · Google Cloud · AWS · Azure · Power BI · GitHub</p>
     </section>
 
-    <section>
-      <h2>Contacto</h2>
+    <section class="en">
+      <h2>Contact</h2>
       <p>Email: <a href="mailto:emmanuel@datalquemy.com">emmanuel@datalquemy.com</a><br>
+      LinkedIn: <a href="https://www.linkedin.com/in/emmanuel-cabrera-550312345" target="_blank">linkedin.com/in/emmanuel-cabrera-550312345</a><br>
+      GitHub: <a href="https://github.com/Datalquemy/github.io" target="_blank">github.com/Datalquemy/github.io</a></p>
+    </section>
+    <section class="es">
+      <h2>Contacto</h2>
+      <p>Correo: <a href="mailto:emmanuel@datalquemy.com">emmanuel@datalquemy.com</a><br>
       LinkedIn: <a href="https://www.linkedin.com/in/emmanuel-cabrera-550312345" target="_blank">linkedin.com/in/emmanuel-cabrera-550312345</a><br>
       GitHub: <a href="https://github.com/Datalquemy/github.io" target="_blank">github.com/Datalquemy/github.io</a></p>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 DatAlquemy. Todos los derechos reservados.
+    &copy; 2025 DatAlquemy. All rights reserved.
   </footer>
 </body>
 </html>
