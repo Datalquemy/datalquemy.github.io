@@ -1,27 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DatAlquemy | Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f9fa;
-      color: #333;
+      background-color: #121212;
+      color: #f0f0f0;
     }
     header {
-      background-color: #222;
-      color: white;
+      background-color: #1f1f1f;
+      color: #f0f0f0;
       padding: 2rem;
       text-align: center;
     }
     header img {
-      max-height: 80px;
-      margin-bottom: 0.5rem;
+      max-width: 120px;
     }
     main {
       padding: 2rem;
@@ -32,18 +31,37 @@
       margin-bottom: 2.5rem;
     }
     h2 {
-      border-bottom: 2px solid #ccc;
+      border-bottom: 2px solid #444;
       padding-bottom: 0.5rem;
     }
     a {
-      color: #0056b3;
+      color: #4ea1ff;
       text-decoration: none;
     }
+    a:hover {
+      text-decoration: underline;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #4ea1ff;
+      color: #121212;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1rem;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #62b3ff;
+    }
     footer {
-      background-color: #eee;
+      background-color: #1f1f1f;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
+      color: #aaa;
     }
   </style>
 </head>
@@ -57,6 +75,7 @@
     <section>
       <h2>Sobre mí</h2>
       <p>Soy Emmanuel Eduardo, fundador de DatAlquemy. Tengo más de 18 años de experiencia en tecnología y actualmente desarrollo soluciones de análisis de datos aplicadas a sectores como la movilidad urbana y la industria energética usando herramientas como Python, Databricks, Spark, GCP y AWS.</p>
+      <a href="cv.pdf" class="button" download>📄 Descargar CV</a>
     </section>
 
     <section>
@@ -75,7 +94,7 @@
 
     <section>
       <h2>Contacto</h2>
-      <p>Email: emmanuel@datalquemy.com<br>
+      <p>Email: <a href="mailto:emmanuel@datalquemy.com">emmanuel@datalquemy.com</a><br>
       LinkedIn: <a href="https://www.linkedin.com/in/emmanuel-cabrera-550312345" target="_blank">linkedin.com/in/emmanuel-cabrera-550312345</a><br>
       GitHub: <a href="https://github.com/Datalquemy/github.io" target="_blank">github.com/Datalquemy/github.io</a></p>
     </section>
